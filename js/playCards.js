@@ -45,7 +45,8 @@ $(document).ready(function(){
         cardDeck.spread();
         showHand();
     }
-    var c = cardDeck.draw();
+    var doDrawCard = function(){
+        var c = cardDeck.draw();
         if(!c){
             showError('no more cards');
             return;
@@ -57,7 +58,7 @@ $(document).ready(function(){
     var doOrderByRank = function(){
         cardDeck.orderByRank();
         cardDeck.spread(); // update card table
- 
+    }
     var doOrderBySuit = function(){
         cardDeck.orderBySuit();
         cardDeck.spread(); // update card table
