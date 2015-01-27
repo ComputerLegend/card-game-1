@@ -33,7 +33,7 @@ $(document).ready(function(){
         hand[hand.length] = c;
         cardDeck.spread();
         showHand();
-    }  
+    
     var doDrawCard1 = function(){
         var c = cardDeck.draw();
         if(!c){
@@ -43,7 +43,7 @@ $(document).ready(function(){
         hand1[hand1.length] = c;
         cardDeck.spread();
         showHand();
-    }
+    
     var c = cardDeck.draw();
         if(!c){
             showError('no more cards');
@@ -52,15 +52,15 @@ $(document).ready(function(){
         hand[hand.length] = c;
         cardDeck.spread();
         showHand();
-    }
+    
     var doOrderByRank = function(){
         cardDeck.orderByRank();
         cardDeck.spread(); // update card table
-    }
+ 
     var doOrderBySuit = function(){
         cardDeck.orderBySuit();
         cardDeck.spread(); // update card table
-    }
+    
     $('#shuffler').click(doShuffle);
     $('#draw').click(doDrawCard);
     $('#draw1').click(doDrawCard1);
