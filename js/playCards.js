@@ -16,7 +16,8 @@ $(document).ready(function(){
         for(var i=0;i<hand.length;i++){
             el.append(hand[i].getHTML());
         }
-        for(var i=0;i<hand.length;i++){
+        el = $('#cpuHand')
+        for(var i=0;i<hand1.length;i++){
             el.append(hand1[i].getHTML());
         }
     }
@@ -33,7 +34,7 @@ $(document).ready(function(){
         hand[hand.length] = c;
         cardDeck.spread();
         showHand();
-    
+    }
     var doDrawCard1 = function(){
         var c = cardDeck.draw();
         if(!c){
@@ -43,7 +44,7 @@ $(document).ready(function(){
         hand1[hand1.length] = c;
         cardDeck.spread();
         showHand();
-    
+    }
     var c = cardDeck.draw();
         if(!c){
             showError('no more cards');
@@ -52,7 +53,7 @@ $(document).ready(function(){
         hand[hand.length] = c;
         cardDeck.spread();
         showHand();
-    
+    }
     var doOrderByRank = function(){
         cardDeck.orderByRank();
         cardDeck.spread(); // update card table
@@ -60,7 +61,7 @@ $(document).ready(function(){
     var doOrderBySuit = function(){
         cardDeck.orderBySuit();
         cardDeck.spread(); // update card table
-    
+    }
     $('#shuffler').click(doShuffle);
     $('#draw').click(doDrawCard);
     $('#draw1').click(doDrawCard1);
