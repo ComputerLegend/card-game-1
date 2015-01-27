@@ -40,7 +40,7 @@ $(document).ready(function(){
             showError('no more cards');
             return;
         }
-        hand[hand.length] = c;
+        hand1[hand1.length] = c;
         cardDeck.spread();
         showHand();
     }
