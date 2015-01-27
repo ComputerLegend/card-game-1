@@ -3,6 +3,7 @@ $(document).ready(function(){
     cardDeck.spread(); // show it
 
     var hand = [];
+    var hand1 = [];
     var showError = function(msg){
         $('#error').html(msg).show();
         setTimeout(function(){
@@ -15,6 +16,9 @@ $(document).ready(function(){
         for(var i=0;i<hand.length;i++){
             el.append(hand[i].getHTML());
         }
+        for(var i=0;i<hand.length;i++){
+            el.append(hand1[i].getHTML());
+        }
     }
     var doShuffle = function(){
         cardDeck.shuffle();
@@ -22,6 +26,25 @@ $(document).ready(function(){
     }
     var doDrawCard = function(){
         var c = cardDeck.draw();
+        if(!c){
+            showError('no more cards');
+            return;
+        }
+        hand[hand.length] = c;
+        cardDeck.spread();
+        showHand();
+    }  
+    var doDrawCard1 = function(){
+        var c = cardDeck.draw();
+        if(!c){
+            showError('no more cards');
+            return;
+        }
+        hand[hand.length] = c;
+        cardDeck.spread();
+        showHand();
+    }
+    var c = cardDeck.draw();
         if(!c){
             showError('no more cards');
             return;
@@ -40,6 +63,7 @@ $(document).ready(function(){
     }
     $('#shuffler').click(doShuffle);
     $('#draw').click(doDrawCard);
+    $('#draw1').click(doDrawCard1);
     $('#shuffleDraw').click(function(){
         doShuffle();
         doDrawCard();
