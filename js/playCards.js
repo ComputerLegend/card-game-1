@@ -71,6 +71,16 @@ $(document).ready(function(){
         cardDeck.addCard(c);
         cardDeck.spread();
     });
+        $('#addCard1').click(function(){
+        if(!hand.length){
+            showError('your hand is empty');
+            return;
+        }
+        var c = hand1.pop();
+        showHand();
+        cardDeck.addCard(c);
+        cardDeck.spread();
+    });
     $('#orderByRank').click(doOrderByRank);
     $('#orderBySuit').click(doOrderBySuit);
 
