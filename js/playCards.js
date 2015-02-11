@@ -17,6 +17,7 @@ $(document).ready(function(){
             el.append(hand[i].getHTML());
         }
         el = $('#cpuHand')
+        el.html('');
         for(var i=0;i<hand1.length;i++){
             el.append(hand1[i].getHTML());
         }
