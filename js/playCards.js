@@ -46,16 +46,6 @@ $(document).ready(function(){
         cardDeck.spread();
         showHand();
     }
-    var doDrawCard = function(){
-        var c = cardDeck.draw();
-        if(!c){
-            showError('no more cards');
-            return;
-        }
-        hand[hand.length] = c;
-        cardDeck.spread();
-        showHand();
-    }
     var doOrderByRank = function(){
         cardDeck.orderByRank();
         cardDeck.spread(); // update card table
