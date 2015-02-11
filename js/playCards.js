@@ -72,7 +72,7 @@ $(document).ready(function(){
         cardDeck.spread();
     });
         $('#addCard1').click(function(){
-        if(!hand.length){
+        if(!hand1.length){
             showError('your hand is empty');
             return;
         }
