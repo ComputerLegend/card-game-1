@@ -4,6 +4,7 @@ $(document).ready(function(){
 
     var hand = [];
     var hand1 = [];
+    var discardPile = [];
     var showError = function(msg){
         $('#error').html(msg).show();
         setTimeout(function(){
