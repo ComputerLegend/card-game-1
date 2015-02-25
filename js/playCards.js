@@ -68,9 +68,8 @@ $(document).ready(function(){
             return;
         }
         var c = hand.pop();
-        showHand();
-        cardDeck.addCard(c);
-        cardDeck.spread();
+        discardPile[discardPile.length] = c;
+            showHand();
     });
         $('#addCard1').click(function(){
         if(!hand1.length){
@@ -78,10 +77,9 @@ $(document).ready(function(){
             return;
         }
         var c = hand1.pop();
-        showHand();
-        cardDeck.addCard(c);
-        cardDeck.spread();
-    });
+        discardPile[discardPile.length] = c;
+            showHand();
+        });
     $('#orderByRank').click(doOrderByRank);
     $('#orderBySuit').click(doOrderBySuit);
 
