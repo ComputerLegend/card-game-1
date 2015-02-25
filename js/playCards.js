@@ -22,6 +22,11 @@ $(document).ready(function(){
         for(var i=0;i<hand1.length;i++){
             el.append(hand1[i].getHTML());
         }
+                el = $('#discardPile')
+        el.html('');
+        for(var i=0;i<discardPile.length;i++){
+            el.append(discardPile[i].getHTML());
+        }
     }
     var doShuffle = function(){
         cardDeck.shuffle();
