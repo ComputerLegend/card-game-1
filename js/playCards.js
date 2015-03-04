@@ -86,7 +86,7 @@ $(document).ready(function(){
             showHand();
     });
             $('#giveCard').click(function(){
-        if(!hand.length){
+        if(!hand1.length){
             showError('your hand is empty');
             return;
         }
