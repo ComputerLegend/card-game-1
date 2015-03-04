@@ -85,7 +85,7 @@ $(document).ready(function(){
         hand1[hand1.length] = c;
             showHand();
     });
-            $('#giveCard').click(function(){
+            $('#giveCard1').click(function(){
         if(!hand1.length){
             showError('your hand is empty');
             return;
