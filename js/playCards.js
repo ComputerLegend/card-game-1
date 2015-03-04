@@ -85,6 +85,15 @@ $(document).ready(function(){
         hand1[hand1.length] = c;
             showHand();
     });
+            $('#giveCard').click(function(){
+        if(!hand.length){
+            showError('your hand is empty');
+            return;
+        }
+        var c = hand.pop();
+        hand[hand.length] = c;
+            showHand();
+    });
         $('#addCard1').click(function(){
         if(!hand1.length){
             showError('your hand is empty');
