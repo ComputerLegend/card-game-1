@@ -87,7 +87,7 @@ $(document).ready(function(){
         });
     $('#orderByRank').click(doOrderByRank);
     $('#orderBySuit').click(doOrderBySuit);
-
+    $('#giveCard').click(doGiveCard);
 });
 /*
 // if we weren't using jquery to handle the document ready state, we would do this:
