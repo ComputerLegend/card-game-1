@@ -76,6 +76,15 @@ $(document).ready(function(){
         discardPile[discardPile.length] = c;
             showHand();
     });
+        $('#giveCard').click(function(){
+        if(!hand.length){
+            showError('your hand is empty');
+            return;
+        }
+        var c = hand.pop();
+        hand1[hand1.length] = c;
+            showHand();
+    });
         $('#addCard1').click(function(){
         if(!hand1.length){
             showError('your hand is empty');
@@ -87,7 +96,6 @@ $(document).ready(function(){
         });
     $('#orderByRank').click(doOrderByRank);
     $('#orderBySuit').click(doOrderBySuit);
-    $('#giveCard').click(doGiveCard);
 });
 /*
 // if we weren't using jquery to handle the document ready state, we would do this:
