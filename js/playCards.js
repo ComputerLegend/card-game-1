@@ -90,7 +90,7 @@ $(document).ready(function(){
             showError('your hand is empty');
             return;
         }
-        var c = hand.pop();
+        var c = hand1.pop();
         hand[hand.length] = c;
             showHand();
     });
