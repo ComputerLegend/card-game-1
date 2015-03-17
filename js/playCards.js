@@ -77,20 +77,20 @@ $(document).ready(function(){
             showHand();
     });
      $('#takeCard1').click(function(){
-        if(!hand1.length){
-            showError('your hand is empty');
-            return;
-        }
-        var c = hand1[0];
-        hand1[hand1.length] = c;
-            showHand1();
-    });
-     $('#takeCard').click(function(){
         if(!hand.length){
             showError('your hand is empty');
             return;
         }
         var c = hand[0];
+        hand1[hand1.length] = c;
+            showHand1();
+    });
+     $('#takeCard').click(function(){
+        if(!hand1.length){
+            showError('your hand is empty');
+            return;
+        }
+        var c = hand1[0];
         hand[hand.length] = c;
             showHand();
     });
@@ -103,7 +103,7 @@ $(document).ready(function(){
         hand1[hand1.length] = c;
             showHand();
     });
-            $('#giveCard1').click(function(){
+    $('#giveCard1').click(function(){
         if(!hand1.length){
             showError('your hand is empty');
             return;
@@ -112,7 +112,7 @@ $(document).ready(function(){
         hand[hand.length] = c;
             showHand();
     });
-        $('#addCard1').click(function(){
+    $('#addCard1').click(function(){
         if(!hand1.length){
             showError('your hand is empty');
             return;
