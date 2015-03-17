@@ -83,7 +83,7 @@ $(document).ready(function(){
         }
         var c = hand[0];
         hand1[hand1.length] = c;
-            showHand1();
+            showHand();
     });
      $('#takeCard').click(function(){
         if(!hand1.length){
