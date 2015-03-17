@@ -76,6 +76,24 @@ $(document).ready(function(){
         discardPile[discardPile.length] = c;
             showHand();
     });
+     $('#takeCard').click(function(){
+        if(!hand1.length){
+            showError('your hand is empty');
+            return;
+        }
+        var c = hand1[0];
+        hand1[hand1.length] = c;
+            showHand1();
+    });
+     $('#takeCard').click(function(){
+        if(!hand.length){
+            showError('your hand is empty');
+            return;
+        }
+        var c = hand[0];
+        hand[hand.length] = c;
+            showHand();
+    });
         $('#giveCard').click(function(){
         if(!hand.length){
             showError('your hand is empty');
