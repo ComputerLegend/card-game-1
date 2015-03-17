@@ -76,7 +76,7 @@ $(document).ready(function(){
         discardPile[discardPile.length] = c;
             showHand();
     });
-     $('#takeCard').click(function(){
+     $('#takeCard1').click(function(){
         if(!hand1.length){
             showError('your hand is empty');
             return;
